@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторна робота №5 — Варіант 23</title>
+  <style>
+    /* Основні стилі для сторінки */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: #f4f6f9;
+    }
 
+    h2 {
+      color: #1a365d;
+      text-align: center;
+    }
+
+    /* Стилі для таблиці */
+    .schedule-table {
+      width: 85%;
+      margin: 20px auto;
+      border-collapse: collapse; /* Об'єднання меж для чистого вигляду */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+    }
+
+    /* Назва таблиці (caption) */
+    .schedule-table caption {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #2b6cb0;
+    }
+
+    /* Оформлення заголовків */
+    .schedule-table th {
+      background-color: #2b6cb0; /* Синій фон заголовка */
+      color: #ffffff;             /* Білий колір тексту */
+      padding: 12px;
+      border: 1px solid #cbd5e0;
+      text-align: center;
+    }
+
+    /* Оформлення звичайних комірок */
+    .schedule-table td {
+      padding: 10px;
+      border: 1px solid #cbd5e0;
+      text-align: center;
+      color: #2d3748;
+    }
+
+    /* Зебра-ефект: чергування кольорів рядків */
+    .schedule-table tbody tr:nth-child(even) {
+      background-color: #edf2f7;
+    }
+
+    /* Ефект наведення курсору на рядок */
+    .schedule-table tbody tr:hover {
+      background-color: #e2e8f0;
+    }
+
+    /* Стилі для комірок зі статусом */
+    .status-active {
+      color: #2f855a; /* Зелений колір */
+      font-weight: bold;
+    }
+
+    .status-delayed {
+      color: #c53030; /* Червоний колір */
+      font-weight: bold;
+    }
+
+    /* Підсумковий блок tfoot */
+    .schedule-table tfoot td {
+      background-color: #e2e8f0;
+      font-weight: bold;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Лабораторна робота №5. Робота з таблицями</h2>
+
+  <!-- Створення таблиці "Розклад поїздів" -->
+  <table class="schedule-table">
+    <caption>Розклад руху пасажирських поїздів</caption>
+    
+    <!-- Заголовок таблиці (<thead>) -->
+    <thead>
+      <tr>
+        <th rowspan="2">№ Поїзда</th>
+        <th colspan="2">Маршрут</th>
+        <th colspan="2">Час</th>
+        <th rowspan="2">Перон</th>
+        <th rowspan="2">Статус</th>
+      </tr>
+      <tr>
+        <th>Пункт відправлення</th>
+        <th>Пункт прибуття</th>
+        <th>Відправлення</th>
+        <th>Прибуття</th>
+      </tr>
+    </thead>
+
+    <!-- Основна частина таблиці (<tbody>) -->
+    <tbody>
+      <tr>
+        <td><strong>012К</strong></td>
+        <!-- Об'єднання по вертикалі: два поїзди вирушають з одного міста -->
+        <td rowspan="2" style="background-color: #feebc8;">Київ-Пас.</td>
+        <td>Львів</td>
+        <td>21:15</td>
+        <td>06:20</td>
+        <td>1</td>
+        <td class="status-active">За розкладом</td>
+      </tr>
+      <tr>
+        <td><strong>072О</strong></td>
+        <td>Харків-Пас.</td>
+        <td>22:40</td>
+        <td>07:55</td>
+        <td>3</td>
+        <td class="status-active">За розкладом</td>
+      </tr>
+      <tr>
+        <td><strong>105К</strong></td>
+        <td>Одеса-Головна</td>
+        <td>Київ-Пас.</td>
+        <td>21:10</td>
+        <td>05:00</td>
+        <td>2</td>
+        <td class="status-delayed">Затримується (15 хв)</td>
+      </tr>
+      <tr>
+        <td><strong>015О</strong></td>
+        <td>Харків-Пас.</td>
+        <td>Ясіня</td>
+        <td>15:00</td>
+        <td>10:45</td>
+        <td>4</td>
+        <td class="status-active">За розкладом</td>
+      </tr>
+      <tr>
+        <td><strong>007К</strong></td>
+        <td>Київ-Пас.</td>
+        <td>Чернівці</td>
+        <td>20:05</td>
+        <td>08:15</td>
+        <td>1</td>
+        <td class="status-active">За розкладом</td>
+      </tr>
+    </tbody>
+
+    <!-- Підсумкова частина таблиці (<tfoot>) -->
+    <tfoot>
+      <tr>
+        <!-- Об'єднання по горизонталі 7 стовпчиків для загальної інформації -->
+        <td colspan="7">Всього рейсів у розкладі: 5 | Інформація оновлюється кожні 10 хвилин</td>
+      </tr>
+    </tfoot>
+  </table>
+
+</body>
+</html>
