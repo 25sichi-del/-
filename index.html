@@ -1,108 +1,196 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Моя улюблена гра — PUBG: Battlegrounds</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      margin: 30px;
-      background-color: #121212;
-      color: #e0e0e0;
-    }
-    .container {
-      max-width: 850px;
-      margin: 0 auto;
-      background: #1e1e1e;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
-      border: 1px solid #333;
-    }
-    h1 {
-      color: #f39c12;
-      text-align: center;
-      border-bottom: 2px solid #f39c12;
-      padding-bottom: 10px;
-    }
-    h2 {
-      color: #e67e22;
-      margin-top: 25px;
-    }
-    blockquote {
-      background: #2a2a2a;
-      border-left: 5px solid #f39c12;
-      margin: 20px 0;
-      padding: 12px 20px;
-      font-style: italic;
-      color: #f1c40f;
-    }
-    mark {
-      background-color: #d35400;
-      color: #fff;
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-    ol, ul {
-      background-color: #252525;
-      padding: 20px 30px;
-      border-radius: 8px;
-    }
-    li {
-      margin-bottom: 8px;
-    }
-    footer {
-      margin-top: 30px;
-      text-align: center;
-      font-size: 0.9em;
-      color: #888;
-      border-top: 1px solid #333;
-      padding-top: 15px;
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Навчальні ресурси для IT-студентів — Варіант №23</title>
+<style>
+:root { 
+  --bg: #f8fafc; 
+  --card: #ffffff; 
+  --accent: #2563eb; 
+  --accent-hover: #1d4ed8;
+  --muted: #64748b; 
+  --dark: #0f172a;
+}
+body { 
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+  margin: 0; 
+  background: var(--bg); 
+  color: #0f172a; 
+  line-height: 1.6;
+}
+.container { 
+  max-width: 900px; 
+  margin: 40px auto; 
+  padding: 24px; 
+}
+header { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 16px; 
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 16px;
+}
+h1 { 
+  margin: 0; 
+  font-size: 1.6rem; 
+  color: var(--accent);
+}
+nav a { 
+  margin-left: 14px; 
+  text-decoration: none; 
+  color: var(--muted); 
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: var(--accent);
+}
+.card { 
+  background: var(--card); 
+  border-radius: 12px; 
+  padding: 24px; 
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05); 
+  border: 1px solid #e2e8f0;
+}
+.resource-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+}
+.resource-list li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #e2e8f0;
+}
+.resource-list li:last-child {
+  border-bottom: none;
+}
+.resource-list a {
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: none;
+}
+.resource-list a:hover {
+  text-decoration: underline;
+}
+.actions { 
+  margin-top: 20px; 
+  display: flex; 
+  gap: 12px; 
+}
+button { 
+  border: 0; 
+  padding: 10px 18px; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+.btn-primary { 
+  background: var(--accent); 
+  color: #fff; 
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+.btn-ghost { 
+  background: #e2e8f0; 
+  color: var(--dark); 
+}
+.btn-ghost:hover {
+  background: #cbd5e1;
+}
+footer { 
+  margin-top: 36px; 
+  text-align: center; 
+  color: var(--muted); 
+  font-size: 0.9rem; 
+  border-top: 1px solid #e2e8f0;
+  padding-top: 16px;
+}
+pre { 
+  background: var(--dark); 
+  color: #e2e8f0; 
+  padding: 14px; 
+  border-radius: 8px; 
+  overflow: auto; 
+  font-size: 0.9rem;
+}
+</style>
 </head>
 <body>
+<div class="container">
+<header>
+<h1>Освітні IT-Ресурси</h1>
+<nav>
+<a href="#">Головна</a>
+<a href="#basics">Основи</a>
+<a href="#courses">Курси</a>
+<a href="#tools">Інструменти</a>
+</nav>
+</header>
 
-  <div class="container">
-    <!-- Головний заголовок сторінки -->
-    <h1>Моя улюблена гра: PUBG: Battlegrounds</h1>
+<main style="margin-top:24px">
+<section class="card">
+<h2 id="welcome">Вітаємо на Порталі Навчальних Ресурсів!</h2>
+<p style="color:var(--muted)">Цей сайт розроблено в рамках лабораторної роботи №2 (Варіант №23). Тут зібрано найкращі джерела знань для студентів напрямку «Вебтехнології та вебдизайн».</p>
+<div class="actions">
+<button class="btn-primary" id="greetBtn">Показати пораду</button>
+<button class="btn-ghost" id="showCode">Зразки коду HTML/CSS</button>
+</div>
+<div id="output" style="margin-top:14px"></div>
+</section>
 
-    <!-- Загальний опис гри -->
-    <p>
-      <b>PUBG: Battlegrounds</b> (PlayerUnknown's Battlegrounds) — це культова багатокористувацька гра в жанрі <i>"Королівська битва" (Battle Royale)</i>, розроблена компанією Krafton. 
-      У кожному матчі <u>100 гравців</u> десантуються на величезний острів без жодного спорядження, де змагаються за виживання, поки безпечна зона невпинно звужується.
-    </p>
+<section class="card" style="margin-top:20px">
+<h3 id="basics">1. Довідники з основ веб-розробки (HTML, CSS, JS)</h3>
+<ul class="resource-list">
+  <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a> — Найповніша офіційна документація з веб-технологій від Mozilla.</li>
+  <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a> — Інтерактивні туторіали з прикладами та онлайн-редактором коду.</li>
+  <li><a href="https://uk.javascript.info/" target="_blank">Сучасний підручник JavaScript</a> — Детальний курс з мови програмування JS українською мовою.</li>
+</ul>
+</section>
 
-    <!-- Цитата про філософію виживання у PUBG -->
-    <blockquote>
-      <q>Winner Winner Chicken Dinner! — це заповітне гасло здобуває лише той, хто вміє поєднувати хитрість, точну стрільбу та холодний розрахунок.</q>
-    </blockquote>
+<section class="card" style="margin-top:20px">
+<h3 id="courses">2. Онлайн-платформи навчальних курсів</h3>
+<ul class="resource-list">
+  <li><a href="https://prometheus.org.ua/" target="_blank">Prometheus</a> — Провідна українська платформа безкоштовних онлайн-курсів.</li>
+  <li><a href="https://www.coursera.org/" target="_blank">Coursera</a> — Курси від провідних світових університетів та IT-компаній.</li>
+  <li><a href="https://www.edx.org/" target="_blank">edX</a> — Навчальні програми з програмування від MIT та Harvard.</li>
+</ul>
+</section>
 
-    <h2>Категорії спорядження та луту</h2>
-    <ul>
-      <li><mark>Стрілецька зброя:</mark> Штурмові гвинтівки (M416, Beryl M762), снайперські гвинтівки (Kar98k, AWM) та ПП.</li>
-      <li>Захисний лут: Шоломи та бронежилети 1–3 рівнів.</li>
-      <li>Медикаменти: Малі аптечки, великі медичні комплекти, енергетичні напої та знеболювальні.</li>
-      <li>Транспорт: Позашляховики UAZ, багі, мотоцикли та катери для швидкого переміщення в зону.</li>
-    </ul>
+<section class="card" style="margin-top:20px">
+<h3 id="tools">3. Корисні інструменти розробника</h3>
+<p style="color:var(--muted)">Необхідний софт для комфортного написання та публікації коду:</p>
+<ul class="resource-list">
+  <li><a href="https://vscodium.com/" target="_blank">VSCodium / VS Code</a> — Зручний редактор коду з підтримкою розширень.</li>
+  <li><a href="https://github.com/" target="_blank">GitHub</a> — Платформа хостингу коду та системи контролю версій Git.</li>
+  <li><a href="https://www.figma.com/" target="_blank">Figma</a> — Інструмент для проектування веб-дизайну та макетів інтерфейсу.</li>
+</ul>
+<pre id="codePreview" style="display:none">&lt;!-- Приклад використання тегу посилання --&gt;&#10;&lt;a href="https://developer.mozilla.org/" target="_blank"&gt;Відвідати MDN Web Docs&lt;/a&gt;</pre>
+</section>
+</main>
 
-    <h2>5 Основних правил виживання у PUBG</h2>
-    <p>Щоб здобути бажане перше місце та забрати «переможний обід», дотримуйтеся таких правил:</p>
-    <ol>
-      <li><b>Правильний вибір точки десантування:</b> Оцініть траєкторію польоту літака. Стрибайте у великі міста для швидкого бою або на віддалені кемпи для спокійної лутації.</li>
-      <li><b>Ефективний збір луту (Looting):</b> Якнайшвидше знайдіть бронежилет, шолом та першу зброю. Завжди тримайте в рюкзаку запас медикаментів та димових гранат.</li>
-      <li><b>Контроль безпечної зони (Blue Zone):</b> Постійно стежте за таймером та картою. Синя зона завдає шкоди, яка зростає з кожним колом.</li>
-      <li><b>Тактика позиціонування:</b> Займайте панівні висоти, укриття (камені, дерева, будівлі) та уникайте відкритих полів без димових завіс.</li>
-      <li><b>Фінальна стадія (Top-10):</b> У фінальному колі не розкривайте свою позицію передчасно. Дайте іншим ворогам нейтралізувати один одного.</li>
-    </ol>
+<footer>
+<small>Сайт створено студентом Січ Юрієм (Група ІТ-2) &bull; Оновлено: <span id="now"></span></small>
+</footer>
+</div>
 
-    <!-- Футер із спеціальними символами -->
-    <footer>
-      <p>&copy; 2026 Всі права захищено. Створено студентом Січ Юрієм &bull; Група ІТ-2 &bull; Варіант &num;23</p>
-    </footer>
-  </div>
+<script>
+document.getElementById('now').textContent = new Date().toLocaleString();
+document.getElementById('greetBtn').addEventListener('click', function(){
+const out = document.getElementById('output');
+out.innerHTML = '<div style="padding:10px; background:#eff6ff; border-left:4px solid #2563eb; color:#1e40af; border-radius:4px;"><strong>Порада для вивчення IT:</strong> Практикуйтеся щодня! Пишіть код власноруч, досліджуйте чужі репозиторії на GitHub та читайте офіційну документацію MDN.</div>';
+});
 
+document.getElementById('showCode').addEventListener('click', function(){
+const pre = document.getElementById('codePreview');
+pre.style.display = pre.style.display === 'none' ? 'block' : 'none';
+});
+</script>
 </body>
 </html>
