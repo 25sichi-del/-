@@ -3,204 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Лабораторна робота №5 — Варіант 23 (Закарпаття)</title>
+  <title>Моя улюблена гра — PUBG: Battlegrounds</title>
   <style>
-    /* Основні стилі для сторінки */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
       margin: 30px;
-      background-color: #f0f4f8;
+      background-color: #121212;
+      color: #e0e0e0;
     }
-
-    h2 {
-      color: #1b4965;
-      text-align: center;
-      margin-bottom: 5px;
-    }
-
-    .subtitle {
-      text-align: center;
-      color: #5c6b73;
-      margin-bottom: 25px;
-      font-size: 0.95em;
-    }
-
-    /* Стилі для таблиці */
-    .schedule-table {
-      width: 90%;
+    .container {
+      max-width: 850px;
       margin: 0 auto;
-      border-collapse: collapse; /* Об'єднання меж */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      background-color: #ffffff;
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      border: 1px solid #333;
+    }
+    h1 {
+      color: #f39c12;
+      text-align: center;
+      border-bottom: 2px solid #f39c12;
+      padding-bottom: 10px;
+    }
+    h2 {
+      color: #e67e22;
+      margin-top: 25px;
+    }
+    blockquote {
+      background: #2a2a2a;
+      border-left: 5px solid #f39c12;
+      margin: 20px 0;
+      padding: 12px 20px;
+      font-style: italic;
+      color: #f1c40f;
+    }
+    mark {
+      background-color: #d35400;
+      color: #fff;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    ol, ul {
+      background-color: #252525;
+      padding: 20px 30px;
       border-radius: 8px;
-      overflow: hidden;
     }
-
-    /* Назва таблиці (caption) */
-    .schedule-table caption {
-      font-size: 1.25em;
-      font-weight: bold;
-      padding-bottom: 12px;
-      color: #0b2545;
+    li {
+      margin-bottom: 8px;
     }
-
-    /* Оформлення заголовків */
-    .schedule-table th {
-      background-color: #134074; /* Темно-синій закарпатський мотив */
-      color: #ffffff;             /* Білий колір тексту */
-      padding: 12px 10px;
-      border: 1px solid #8da9c4;
+    footer {
+      margin-top: 30px;
       text-align: center;
-      font-size: 0.95em;
-    }
-
-    /* Оформлення звичайних комірок */
-    .schedule-table td {
-      padding: 10px;
-      border: 1px solid #cbd5e0;
-      text-align: center;
-      color: #1d2d44;
       font-size: 0.9em;
-    }
-
-    /* Зебра-ефект: чергування кольорів рядків */
-    .schedule-table tbody tr:nth-child(even) {
-      background-color: #f8fafc;
-    }
-
-    /* Ефект наведення курсору на рядок */
-    .schedule-table tbody tr:hover {
-      background-color: #e2e8f0;
-    }
-
-    /* Стилі для статусу поїзда */
-    .status-ok {
-      color: #2e7d32; /* Зелений */
-      font-weight: bold;
-    }
-
-    .status-delay {
-      color: #c62828; /* Червоний */
-      font-weight: bold;
-    }
-
-    /* Виділення регіонів */
-    .highlight-zak {
-      background-color: #eefcce !important; /* Ніжно-салатовий для Закарпаття */
-      font-weight: bold;
-    }
-
-    /* Підсумковий блок tfoot */
-    .schedule-table tfoot td {
-      background-color: #eeeff0;
-      font-weight: bold;
-      color: #134074;
-      padding: 12px;
+      color: #888;
+      border-top: 1px solid #333;
+      padding-top: 15px;
     }
   </style>
 </head>
 <body>
 
-  <h2>Лабораторна робота №5</h2>
-  <div class="subtitle">Розклад поїздів: Закарпатська та сусідні області (Львівська, Івано-Франківська, Чернівецька)</div>
+  <div class="container">
+    <!-- Головний заголовок сторінки -->
+    <h1>Моя улюблена гра: PUBG: Battlegrounds</h1>
 
-  <!-- Створення таблиці "Розклад поїздів" -->
-  <table class="schedule-table">
-    <caption>Розклад руху регіональних та міжобласних поїздів</caption>
-    
-    <!-- Заголовок таблиці (<thead>) -->
-    <thead>
-      <tr>
-        <th rowspan="2">№ Поїзда</th>
-        <th colspan="2">Маршрут</th>
-        <th colspan="2">Час</th>
-        <th rowspan="2">Колія / Перон</th>
-        <th rowspan="2">Статус</th>
-      </tr>
-      <tr>
-        <th>Пункт відправлення</th>
-        <th>Пункт прибуття</th>
-        <th>Відправлення</th>
-        <th>Прибуття</th>
-      </tr>
-    </thead>
+    <!-- Загальний опис гри -->
+    <p>
+      <b>PUBG: Battlegrounds</b> (PlayerUnknown's Battlegrounds) — це культова багатокористувацька гра в жанрі <i>"Королівська битва" (Battle Royale)</i>, розроблена компанією Krafton. 
+      У кожному матчі <u>100 гравців</u> десантуються на величезний острів без жодного спорядження, де змагаються за виживання, поки безпечна зона невпинно звужується.
+    </p>
 
-    <!-- Основна частина таблиці (<tbody>) -->
-    <tbody>
-      <!-- Приклад 1: Об'єднання rowspan для Ужгорода (Закарпаття -> Львів / Франківськ) -->
-      <tr>
-        <td><strong>№ 829</strong></td>
-        <td rowspan="2" class="highlight-zak">Ужгород<br><small>(Закарпатська обл.)</small></td>
-        <td>Львів</td>
-        <td>05:12</td>
-        <td>10:08</td>
-        <td>1 / 1</td>
-        <td class="status-ok">За розкладом</td>
-      </tr>
-      <tr>
-        <td><strong>№ 810</strong></td>
-        <td>Івано-Франківськ</td>
-        <td>15:30</td>
-        <td>22:15</td>
-        <td>2 / 1</td>
-        <td class="status-ok">За розкладом</td>
-      </tr>
+    <!-- Цитата про філософію виживання у PUBG -->
+    <blockquote>
+      <q>Winner Winner Chicken Dinner! — це заповітне гасло здобуває лише той, хто вміє поєднувати хитрість, точну стрільбу та холодний розрахунок.</q>
+    </blockquote>
 
-      <!-- Приклад 2: Мукачево -> Сусідні області -->
-      <tr>
-        <td><strong>№ 749</strong></td>
-        <td class="highlight-zak">Мукачево</td>
-        <td>Чоп</td>
-        <td>16:00</td>
-        <td>16:50</td>
-        <td>3 / 2</td>
-        <td class="status-ok">За розкладом</td>
-      </tr>
+    <h2>Категорії спорядження та луту</h2>
+    <ul>
+      <li><mark>Стрілецька зброя:</mark> Штурмові гвинтівки (M416, Beryl M762), снайперські гвинтівки (Kar98k, AWM) та ПП.</li>
+      <li>Захисний лут: Шоломи та бронежилети 1–3 рівнів.</li>
+      <li>Медикаменти: Малі аптечки, великі медичні комплекти, енергетичні напої та знеболювальні.</li>
+      <li>Транспорт: Позашляховики UAZ, багі, мотоцикли та катери для швидкого переміщення в зону.</li>
+    </ul>
 
-      <!-- Приклад 3: Затримка рейсів (Львів -> Закарпаття) -->
-      <tr>
-        <td><strong>№ 015О</strong></td>
-        <td>Львів</td>
-        <td class="highlight-zak">Ясіня<br><small>(Рахівський р-н)</small></td>
-        <td>03:25</td>
-        <td>08:00</td>
-        <td>1 / 2</td>
-        <td class="status-delay">Затримується (20 хв)</td>
-      </tr>
+    <h2>5 Основних правил виживання у PUBG</h2>
+    <p>Щоб здобути бажане перше місце та забрати «переможний обід», дотримуйтеся таких правил:</p>
+    <ol>
+      <li><b>Правильний вибір точки десантування:</b> Оцініть траєкторію польоту літака. Стрибайте у великі міста для швидкого бою або на віддалені кемпи для спокійної лутації.</li>
+      <li><b>Ефективний збір луту (Looting):</b> Якнайшвидше знайдіть бронежилет, шолом та першу зброю. Завжди тримайте в рюкзаку запас медикаментів та димових гранат.</li>
+      <li><b>Контроль безпечної зони (Blue Zone):</b> Постійно стежте за таймером та картою. Синя зона завдає шкоди, яка зростає з кожним колом.</li>
+      <li><b>Тактика позиціонування:</b> Займайте панівні висоти, укриття (камені, дерева, будівлі) та уникайте відкритих полів без димових завіс.</li>
+      <li><b>Фінальна стадія (Top-10):</b> У фінальному колі не розкривайте свою позицію передчасно. Дайте іншим ворогам нейтралізувати один одного.</li>
+    </ol>
 
-      <!-- Приклад 4: Чернівці -> Закарпаття -->
-      <tr>
-        <td><strong>№ 601</strong></td>
-        <td>Чернівці</td>
-        <td class="highlight-zak">Тячів / Хуст</td>
-        <td>08:40</td>
-        <td>14:20</td>
-        <td>2 / 1</td>
-        <td class="status-ok">За розкладом</td>
-      </tr>
-
-      <!-- Приклад 5: Воловець -> Львів -->
-      <tr>
-        <td><strong>№ 815</strong></td>
-        <td class="highlight-zak">Воловець</td>
-        <td>Стрий (Львівська обл.)</td>
-        <td>18:10</td>
-        <td>20:05</td>
-        <td>1 / 1</td>
-        <td class="status-ok">За розкладом</td>
-      </tr>
-    </tbody>
-
-    <!-- Підсумкова частина таблиці (<tfoot>) -->
-    <tfoot>
-      <tr>
-        <!-- Об'єднання colspan на 7 стовпчиків -->
-        <td colspan="7">
-          Обслуговувані регіони: Закарпатська, Львівська, Івано-Франківська та Чернівецька області
-        </td>
-      </tr>
-    </tfoot>
-  </table>
+    <!-- Футер із спеціальними символами -->
+    <footer>
+      <p>&copy; 2026 Всі права захищено. Створено студентом Січ Юрієм &bull; Група ІТ-2 &bull; Варіант &num;23</p>
+    </footer>
+  </div>
 
 </body>
 </html>
