@@ -3,44 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Лабораторна робота №5 — Варіант 23</title>
+  <title>Лабораторна робота №5 — Варіант 23 (Закарпаття)</title>
   <style>
     /* Основні стилі для сторінки */
     body {
       font-family: Arial, sans-serif;
       margin: 30px;
-      background-color: #f4f6f9;
+      background-color: #f0f4f8;
     }
 
     h2 {
-      color: #1a365d;
+      color: #1b4965;
       text-align: center;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #5c6b73;
+      margin-bottom: 25px;
+      font-size: 0.95em;
     }
 
     /* Стилі для таблиці */
     .schedule-table {
-      width: 85%;
-      margin: 20px auto;
-      border-collapse: collapse; /* Об'єднання меж для чистого вигляду */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      margin: 0 auto;
+      border-collapse: collapse; /* Об'єднання меж */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       background-color: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
     }
 
     /* Назва таблиці (caption) */
     .schedule-table caption {
-      font-size: 1.2em;
+      font-size: 1.25em;
       font-weight: bold;
-      margin-bottom: 10px;
-      color: #2b6cb0;
+      padding-bottom: 12px;
+      color: #0b2545;
     }
 
     /* Оформлення заголовків */
     .schedule-table th {
-      background-color: #2b6cb0; /* Синій фон заголовка */
+      background-color: #134074; /* Темно-синій закарпатський мотив */
       color: #ffffff;             /* Білий колір тексту */
-      padding: 12px;
-      border: 1px solid #cbd5e0;
+      padding: 12px 10px;
+      border: 1px solid #8da9c4;
       text-align: center;
+      font-size: 0.95em;
     }
 
     /* Оформлення звичайних комірок */
@@ -48,12 +59,13 @@
       padding: 10px;
       border: 1px solid #cbd5e0;
       text-align: center;
-      color: #2d3748;
+      color: #1d2d44;
+      font-size: 0.9em;
     }
 
     /* Зебра-ефект: чергування кольорів рядків */
     .schedule-table tbody tr:nth-child(even) {
-      background-color: #edf2f7;
+      background-color: #f8fafc;
     }
 
     /* Ефект наведення курсору на рядок */
@@ -61,32 +73,40 @@
       background-color: #e2e8f0;
     }
 
-    /* Стилі для комірок зі статусом */
-    .status-active {
-      color: #2f855a; /* Зелений колір */
+    /* Стилі для статусу поїзда */
+    .status-ok {
+      color: #2e7d32; /* Зелений */
       font-weight: bold;
     }
 
-    .status-delayed {
-      color: #c53030; /* Червоний колір */
+    .status-delay {
+      color: #c62828; /* Червоний */
+      font-weight: bold;
+    }
+
+    /* Виділення регіонів */
+    .highlight-zak {
+      background-color: #eefcce !important; /* Ніжно-салатовий для Закарпаття */
       font-weight: bold;
     }
 
     /* Підсумковий блок tfoot */
     .schedule-table tfoot td {
-      background-color: #e2e8f0;
+      background-color: #eeeff0;
       font-weight: bold;
-      font-style: italic;
+      color: #134074;
+      padding: 12px;
     }
   </style>
 </head>
 <body>
 
-  <h2>Лабораторна робота №5. Робота з таблицями</h2>
+  <h2>Лабораторна робота №5</h2>
+  <div class="subtitle">Розклад поїздів: Закарпатська та сусідні області (Львівська, Івано-Франківська, Чернівецька)</div>
 
   <!-- Створення таблиці "Розклад поїздів" -->
   <table class="schedule-table">
-    <caption>Розклад руху пасажирських поїздів</caption>
+    <caption>Розклад руху регіональних та міжобласних поїздів</caption>
     
     <!-- Заголовок таблиці (<thead>) -->
     <thead>
@@ -94,7 +114,7 @@
         <th rowspan="2">№ Поїзда</th>
         <th colspan="2">Маршрут</th>
         <th colspan="2">Час</th>
-        <th rowspan="2">Перон</th>
+        <th rowspan="2">Колія / Перон</th>
         <th rowspan="2">Статус</th>
       </tr>
       <tr>
@@ -107,58 +127,77 @@
 
     <!-- Основна частина таблиці (<tbody>) -->
     <tbody>
+      <!-- Приклад 1: Об'єднання rowspan для Ужгорода (Закарпаття -> Львів / Франківськ) -->
       <tr>
-        <td><strong>012К</strong></td>
-        <!-- Об'єднання по вертикалі: два поїзди вирушають з одного міста -->
-        <td rowspan="2" style="background-color: #feebc8;">Київ-Пас.</td>
+        <td><strong>№ 829</strong></td>
+        <td rowspan="2" class="highlight-zak">Ужгород<br><small>(Закарпатська обл.)</small></td>
         <td>Львів</td>
-        <td>21:15</td>
-        <td>06:20</td>
-        <td>1</td>
-        <td class="status-active">За розкладом</td>
+        <td>05:12</td>
+        <td>10:08</td>
+        <td>1 / 1</td>
+        <td class="status-ok">За розкладом</td>
       </tr>
       <tr>
-        <td><strong>072О</strong></td>
-        <td>Харків-Пас.</td>
-        <td>22:40</td>
-        <td>07:55</td>
-        <td>3</td>
-        <td class="status-active">За розкладом</td>
+        <td><strong>№ 810</strong></td>
+        <td>Івано-Франківськ</td>
+        <td>15:30</td>
+        <td>22:15</td>
+        <td>2 / 1</td>
+        <td class="status-ok">За розкладом</td>
       </tr>
+
+      <!-- Приклад 2: Мукачево -> Сусідні області -->
       <tr>
-        <td><strong>105К</strong></td>
-        <td>Одеса-Головна</td>
-        <td>Київ-Пас.</td>
-        <td>21:10</td>
-        <td>05:00</td>
-        <td>2</td>
-        <td class="status-delayed">Затримується (15 хв)</td>
+        <td><strong>№ 749</strong></td>
+        <td class="highlight-zak">Мукачево</td>
+        <td>Чоп</td>
+        <td>16:00</td>
+        <td>16:50</td>
+        <td>3 / 2</td>
+        <td class="status-ok">За розкладом</td>
       </tr>
+
+      <!-- Приклад 3: Затримка рейсів (Львів -> Закарпаття) -->
       <tr>
-        <td><strong>015О</strong></td>
-        <td>Харків-Пас.</td>
-        <td>Ясіня</td>
-        <td>15:00</td>
-        <td>10:45</td>
-        <td>4</td>
-        <td class="status-active">За розкладом</td>
+        <td><strong>№ 015О</strong></td>
+        <td>Львів</td>
+        <td class="highlight-zak">Ясіня<br><small>(Рахівський р-н)</small></td>
+        <td>03:25</td>
+        <td>08:00</td>
+        <td>1 / 2</td>
+        <td class="status-delay">Затримується (20 хв)</td>
       </tr>
+
+      <!-- Приклад 4: Чернівці -> Закарпаття -->
       <tr>
-        <td><strong>007К</strong></td>
-        <td>Київ-Пас.</td>
+        <td><strong>№ 601</strong></td>
         <td>Чернівці</td>
+        <td class="highlight-zak">Тячів / Хуст</td>
+        <td>08:40</td>
+        <td>14:20</td>
+        <td>2 / 1</td>
+        <td class="status-ok">За розкладом</td>
+      </tr>
+
+      <!-- Приклад 5: Воловець -> Львів -->
+      <tr>
+        <td><strong>№ 815</strong></td>
+        <td class="highlight-zak">Воловець</td>
+        <td>Стрий (Львівська обл.)</td>
+        <td>18:10</td>
         <td>20:05</td>
-        <td>08:15</td>
-        <td>1</td>
-        <td class="status-active">За розкладом</td>
+        <td>1 / 1</td>
+        <td class="status-ok">За розкладом</td>
       </tr>
     </tbody>
 
     <!-- Підсумкова частина таблиці (<tfoot>) -->
     <tfoot>
       <tr>
-        <!-- Об'єднання по горизонталі 7 стовпчиків для загальної інформації -->
-        <td colspan="7">Всього рейсів у розкладі: 5 | Інформація оновлюється кожні 10 хвилин</td>
+        <!-- Об'єднання colspan на 7 стовпчиків -->
+        <td colspan="7">
+          Обслуговувані регіони: Закарпатська, Львівська, Івано-Франківська та Чернівецька області
+        </td>
       </tr>
     </tfoot>
   </table>
